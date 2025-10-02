@@ -4,7 +4,7 @@ This readme includes guidance for users using Mac M1 processors (ARM) or newer m
 
 The approach that is being provided for the course labs is to use Vagrant VMs that are based on VirtualBox in order to run everything.
 
-This approach can experience various difficulties running properly on Mac M1/M2 (ARM) machines. The main issue is that the method here will try to create the VM using an x64 image, while VirtualBox is unable to emulate x64 images on ARM (Mac's with M1 processors or newer).
+This approach can experience various difficulties running properly on Mac M1 (ARM) or newer machines. The main issue is that the method here will try to create the VM using an x64 image, while VirtualBox is unable to emulate x64 images on ARM (Mac's with M1 processors or newer).
 
 In order to be able to create a x64 virtual machine on ARM processor (Apple Silicon, M1 or newer), we need to first install QEMU which will be able to do the needed emulation and to use a suitable Vagrandfile. The new Vagrandfile is based on another image that is compatible with QEMU, which is our only way to emulate x64 images. The format of the file is also different compared to the original Vagrandfile, as QEMU has different calls compared to VirtualBox (The original Vagrandfile).
 
